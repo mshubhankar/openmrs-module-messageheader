@@ -20,9 +20,16 @@ import org.openmrs.module.BaseModuleActivator;
 /**
  * This class contains the logic that is run every time this module is either started or shutdown
  */
+
+//Default Constructor
 public class BasicModuleActivator extends BaseModuleActivator {
 	
+	public BasicModuleActivator() {
+	}
+	
 	private Log log = LogFactory.getLog(this.getClass());
+	
+	private Integer BasicModuleActivatorId;
 	
 	private String author;
 	
@@ -49,6 +56,45 @@ public class BasicModuleActivator extends BaseModuleActivator {
 	private String sourceuri;
 	
 	private String target;
+	
+	/**
+	 * Convenience constructor to create a BasicModuleActivator object by primary key
+	 * 
+	 * @param BasicModuleActivatorId
+	 */
+	public BasicModuleActivator(Integer BasicModuleActivatorId) {
+		this.BasicModuleActivatorId = BasicModuleActivatorId;
+	}
+	
+	public boolean equals(Object obj) {
+		if (!(obj instanceof BasicModuleActivator)) {
+			return false;
+		}
+		BasicModuleActivator rhs = (BasicModuleActivator) obj;
+		if (this.BasicModuleActivatorId != null && rhs.BasicModuleActivatorId != null)
+			return (this.BasicModuleActivatorId.equals(rhs.BasicModuleActivatorId));
+		else
+			return this == obj;
+	}
+	
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode() {
+		if (this.getBasicModuleActivatorId() == null)
+			return super.hashCode();
+		int hash = 3;
+		hash = hash + 31 * this.getBasicModuleActivatorId();
+		return hash;
+	}
+	
+	public Integer getBasicModuleActivatorId() {
+		return BasicModuleActivatorId;
+	}
+	
+	public void setBasicModuleActivatorId(Integer BasicModuleActivatorId) {
+		this.BasicModuleActivatorId = BasicModuleActivatorId;
+	}
 	
 	public String getAuthor() {
 		return author;
