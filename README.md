@@ -1,4 +1,4 @@
-# openmrs-module-messagheader
+# openmrs-module-messageheader
 
 Description
 -----------
