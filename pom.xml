@@ -9,18 +9,18 @@
     </parent>
 
 	<groupId>org.openmrs.module</groupId>
-	<artifactId>basicmodule</artifactId>
+	<artifactId>messageheader</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Basic Module</name>
-	<description>Example OpenMRS Module that may be used as a basis for creating a new module.</description>
+	<name>Message Header</name>
+	<description>Example OpenMRS Module that is made for gsoc intro task for FHIR message header resource.</description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-basicmodule.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-basicmodule.git</developerConnection>
-		<url>https://github.com/openmrs/openmrs-module-basicmodule/</url>
+		<connection>scm:git:git@github.com:mshubhankar/openmrs-module-messagheader.git</connection>
+		<developerConnection>scm:git:git@github.com:mshubhankar/openmrs-module-messagheader.git</developerConnection>
+		<url>https://github.com/mshubhankar/openmrs-module-messagheader.git</url>
 	</scm>
 
 	<modules>
@@ -29,6 +29,6 @@
 	</modules>
 
     <properties>
-        <openmrs.platform.version>1.11.2</openmrs.platform.version>
+        <openmrs.platform.version>2.2.0</openmrs.platform.version>
     </properties>
 </project>
