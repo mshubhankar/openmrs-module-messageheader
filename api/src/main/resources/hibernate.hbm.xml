@@ -5,38 +5,42 @@
  
 <hibernate-mapping package="org.openmrs">
  
-    <class name="BasicModuleActivatore" table="messageheader_myobject">
+    <class name="BasicModuleActivator" table="messageheader_myobject">
  
         <id name="messageheader_myobject_id" type="int" column="concept_name_id">
             <generator />
         </id>
  
         <many-to-one
-            name="concept"
-            column="concept_id"
-            class="Concept"
+            name="BasicModuleActivator"
+            column="messageheader_myobject_id"
+            class="BasicModuleActivator"
             not-null="true"/>
  
-        <property name="name" type="java.lang.String" length="65535" not-null="true" />
-        <property name="locale" type="java.util.Locale" length="50" not-null="true"/>
- 
-        <property name="dateCreated" type="java.util.Date" column="date_created" not-null="true"/>
-        <many-to-one name="creator" column="creator" not-null="true"/>
- 
-        <property name="voided" type="java.lang.Boolean" column="voided"
-            length="1" not-null="true" />
-        <property name="dateVoided" type="java.util.Date"
-            column="date_voided" length="19" />
-        <property name="voidReason" type="java.lang.String"
-            column="void_reason" length="255" />
-        <many-to-one name="voidedBy" column="voided_by" />
- 
-        <set name="tags" table="concept_name_tag_map" cascade="save-update">
-            <key column="concept_name_id"/>
-            <many-to-many column="concept_name_tag_id"/>
-        </set>
- 
-        <property name="uuid" type="java.lang.String" column="uuid" length="38" unique="true" />
+        <property name="author" type="java.lang.String" column="author" length="255" not-null="true" />
+
+        <property name="code" type="java.lang.String" column="code" length="255" not-null="true" />
+
+        <property name="destination" type="java.lang.String" column="destination" length="255" not-null="true" />
+
+        <property name="destinationuri" type="java.lang.String" column="destination-uri" length="255" not-null="true" />
+
+        <property name="enterer" type="java.lang.String" column="enterer" length="255" not-null="true" />
+
+        <property name="receiver" type="java.lang.String" column="receiver" length="255" not-null="true" />
+
+        <property name="responseid" type="java.lang.String" column="response-id" length="255" not-null="true" />
+
+        <property name="resposible" type="java.lang.String" column="resposible" length="255" not-null="true" />
+
+        <property name="sender" type="java.lang.String" column="sender" length="255" not-null="true" />
+
+        <property name="source" type="java.lang.String" column="source" length="255" not-null="true" />
+
+        <property name="sourceuri" type="java.lang.String" column="source-uri" length="255" not-null="true" />
+
+        <property name="target" type="java.lang.String" column="target" length="255" not-null="true" />
+        
     </class>
  
 </hibernate-mapping>
