@@ -25,6 +25,9 @@
 		<class>${MODULE_PACKAGE}.extension.html.AdminList</class>
 	</extension>
 	
+	<mappingFiles> 
+        hibernate.hbm.xml
+	</mappingFiles>
 	
 	<!-- AOP
 	<advice>
